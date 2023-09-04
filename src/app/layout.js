@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Phudu } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const phudu = Phudu({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "Marketing Website",
@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className={phudu.className}>
+      <body className="m-8 flex flex-col">{children}</body>
     </html>
   );
 }
