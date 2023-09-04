@@ -1,14 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import GetInfo from "./forms/getInfo";
+import ContactBtn from "./components/ContactBtn";
 import zebra1 from "../../public/zebra1.jpg";
 import zebra2 from "../../public/zebra2.jpg";
 import zebra3 from "../../public/zebra3.jpg";
-import GetInfo from "./form/getInfo";
 
 const items = [
   {
     image: zebra1,
-    title: "Fits perfectly with your hands",
+    title: "Fits perfectly in your hands",
     link: "/feature1",
     altText: "Hands on typewriter",
   },
@@ -30,10 +31,16 @@ export default function Homepage({ searchParams }) {
   const showModal = searchParams?.modal;
 
   return (
-    <main className="flex flex-col items-center gap-12 justify-center">
-      <h1 className="text-5xl my-24">
+    <main className="flex flex-col items-center gap-8 justify-center">
+      <h1 className="text-6xl mt-12">
         Probably, the coolest Typewriter in the world.
       </h1>
+      <h3 className="text-center text-lg">
+        Embrace the timeless allure of typewriters. <br /> Rediscover the joy of
+        tactile writing with our classic collection. <br /> Craft your words
+        with purpose and precision, one keystroke at a time.
+      </h3>
+
       <div className="flex justify-around gap-12">
         {items.map((item, index) => (
           <div
@@ -49,6 +56,7 @@ export default function Homepage({ searchParams }) {
           </div>
         ))}
       </div>
+
       <div className="text-base">
         <Link
           href="/?modal=true"
@@ -56,9 +64,11 @@ export default function Homepage({ searchParams }) {
         >
           Sign up here
         </Link>
-        <span> for more information</span>
+        <span> for more information about this product...</span>
       </div>
       {showModal && <GetInfo />}
+      <p>or</p>
+      <ContactBtn />
     </main>
   );
 }
