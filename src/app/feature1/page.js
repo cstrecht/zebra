@@ -1,39 +1,16 @@
-import GoBackBtn from "../components/GoBackBtn";
-import ContactBtn from "../components/ContactBtn";
+import FeatureLayout from "../components/FeatureLayout";
+
+const content = {
+  title: "Hands on 👋🏻",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus risus erat, et volutpat justo viverra in. Maecenas rhoncus mi id ex laoreet gravida. Cras tristique mi non quam malesuada vehicula ac nec enim. Duis id ligula porttitor, lacinia nisl et, porta tortor. Nulla lobortis porttitor efficitur. Fusce interdum ex sit amet metus dapibus, et eleifend neque sollicitudin. Nam egestas consectetur sem, ullamcorper vestibulum arcu bibendum vel. Quisque elit tortor, pulvinar in libero sit amet, hendrerit elementum neque. Praesent malesuada elementum ex, ac pulvinar lacus tincidunt eget. Sed porttitor volutpat sem. Duis posuere lacus nec tortor maximus, non ultricies nulla fringilla. Duis tincidunt et velit vel congue. Donec semper nunc arcu, non ultricies sem rutrum vel.",
+};
 
 export default function Feature1() {
   return (
-    <section>
-      <GoBackBtn />
-      <div className="items-center flex flex-col gap-24">
-        <h1 className="flex justify-center  text-6xl text-black font-semibold">
-          Hands on 👋🏻
-        </h1>
-        <article className="mx-24">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce felis
-          neque, luctus ac metus at, imperdiet feugiat tortor. Nulla fermentum
-          imperdiet turpis, tristique placerat tortor sollicitudin quis. Aenean
-          ac metus ante. Maecenas a tortor a magna posuere porta sit amet at
-          orci. Nulla placerat vulputate diam, nec maximus lacus egestas ut.
-          Integer egestas posuere odio, eget elementum libero mattis at. Sed eu
-          pulvinar velit. Nulla non porta enim. Cras erat sem, feugiat in
-          tincidunt ut, egestas in libero. Fusce varius nibh dictum imperdiet
-          sodales. Nunc suscipit quis orci luctus viverra. Nulla aliquet
-          suscipit erat, sed lobortis lectus hendrerit id. Nunc lorem diam,
-          maximus rutrum tellus et, rutrum sodales felis. Nullam lobortis,
-          tortor ut placerat aliquam, nunc ipsum volutpat turpis, sed imperdiet
-          ipsum sapien vitae sapien. Morbi ac ex ut ipsum lobortis porttitor a
-          sed arcu. Nam aliquam orci ipsum, vitae sodales diam vestibulum et.
-          Integer non purus pretium, dapibus elit sit amet, mattis nibh. In eu
-          commodo ligula. Maecenas scelerisque enim accumsan feugiat pharetra.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at
-          convallis ligula. Nulla sit amet elit eget ex luctus elementum vitae
-          sed dui. Duis cursus euismod pulvinar. Nunc dapibus nisl sed faucibus
-          ultrices. Suspendisse leo lacus, aliquet nec sodales in, gravida nec
-          tortor.
-        </article>
-        <ContactBtn />
-      </div>
-    </section>
+    <FeatureLayout
+      featureTitle={content.title}
+      featureDescription={content.description}
+    />
   );
 }
