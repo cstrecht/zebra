@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import GetInfo from "./forms/getInfo";
 import ContactBtn from "./components/ContactBtn";
-import zebra1 from "../../public/zebra1.jpg";
-import zebra2 from "../../public/zebra2.jpg";
-import zebra3 from "../../public/zebra3.jpg";
+import zebra1 from "../../public/images/zebra1.jpg";
+import zebra2 from "../../public/images/zebra2.jpg";
+import zebra3 from "../../public/images/zebra3.jpg";
 
 const items = [
   {
@@ -37,8 +37,8 @@ export default function Homepage({ searchParams }) {
       </h1>
       <h3 className="text-center text-lg">
         Embrace the timeless allure of typewriters. <br /> Rediscover the joy of
-        tactile writing with our classic collection. <br /> Craft your words
-        with purpose and precision, one keystroke at a time.
+        tactile writing with this classic piece. <br /> Craft your words with
+        purpose and precision, one keystroke at a time.
       </h3>
 
       <div className="flex justify-around gap-12">
