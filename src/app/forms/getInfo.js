@@ -2,6 +2,16 @@
 import Link from "next/link";
 
 export default function GetInfo() {
+  async function handleOnSubmit(e) {
+    e.preventDefault();
+
+    await fetch("api/email", {
+      method: "POST",
+      body: JSON.stringify({
+        firstName: "Strecht",
+      }),
+    });
+  }
   return (
     <div className="relative z-10">
       <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
@@ -9,7 +19,7 @@ export default function GetInfo() {
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <div className="relative transform overflow-hidden rounded-lg bg-white text-center shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
             <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-              <form>
+              <form onSubmit={handleOnSubmit}>
                 <div className="mb-4">
                   <label className="block text-gray-700 font-bold text-lg mb-2">
                     Need to know more?
@@ -36,21 +46,21 @@ export default function GetInfo() {
                     />
                   </div>
                 </div>
+                <div className="bg-gray-50 gap-2 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                  <button
+                    type="submit"
+                    className="mt-3 inline-flex w-full justify-center rounded-md bg-purple-500 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-purple-500 "
+                  >
+                    Send me more info
+                  </button>
+                  <Link
+                    href="/"
+                    className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 "
+                  >
+                    Close
+                  </Link>
+                </div>
               </form>
-            </div>
-            <div className="bg-gray-50 gap-2 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-              <Link
-                href="/"
-                className="mt-3 inline-flex w-full justify-center rounded-md bg-purple-500 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-purple-500 "
-              >
-                Send me more info
-              </Link>
-              <Link
-                href="/"
-                className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-500 "
-              >
-                Close
-              </Link>
             </div>
           </div>
         </div>
