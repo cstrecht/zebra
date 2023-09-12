@@ -21,12 +21,20 @@ export default function GetInfo() {
                     fringilla tellus nec tempus tristique. Integer feugiat nulla
                     eleifend sapien consequat fringilla.
                   </p>
-                  <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    id="email"
-                    type="email"
-                    placeholder="Your best email"
-                  />
+                  <div className="flex flex-col gap-6">
+                    <input
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="name"
+                      type="text"
+                      placeholder="What should we call you?"
+                    />
+                    <input
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="email"
+                      type="email"
+                      placeholder="Your best email"
+                    />
+                  </div>
                 </div>
               </form>
             </div>
