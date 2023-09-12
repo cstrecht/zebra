@@ -11,10 +11,10 @@ export default function GetInfo() {
             <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
               <form>
                 <div className="mb-4">
-                  <label className="block text-gray-700 font-bold mb-2">
+                  <label className="block text-gray-700 font-bold text-lg mb-2">
                     Need to know more?
                   </label>
-                  <p className="font-sm my-8">
+                  <p className="text-xs my-8">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Praesent eget dolor eget orci volutpat suscipit iaculis eget
                     lectus. Maecenas bibendum feugiat lectus vitae cursus. Proin
