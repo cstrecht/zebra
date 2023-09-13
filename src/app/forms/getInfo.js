@@ -49,7 +49,7 @@ export default function GetInfo() {
                   <p className="text-base leading-6 my-8">
                     It appears that you are interested in learning more about
                     this product! Well, let me just caution you that this page
-                    is not official. It's a project built for educational
+                    is not official. It&apos;s a project built for educational
                     purposes. However, we do have information to share! Just
                     provide me with your contact details, and you will receive
                     updates in your inbox.

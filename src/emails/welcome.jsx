@@ -18,8 +18,8 @@ export const WelcomeEmail = ({ name }) => (
       <Container style={container}>
         <Heading>Hello {name}!</Heading>
         <Text style={{ ...text, marginBottom: "14px" }}>
-          Did I draw your attention? Just to clarify, I'm not here to sell you
-          anything, though. 😄
+          Did I draw your attention? Just to clarify, I&apos;m not here to sell
+          you anything, though. 😄
         </Text>
         <Link
           href="https://www.allthingstypewriter.com/typewriter-brands/adler-typewriters/"
