@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img alt="My Logo" src="src/app/favicon.ico" width="90px" />
+</div>
 
-## Getting Started
+## 🦓 Zebra Project
 
-First, run the development server:
+The Zebra Project is a Marketing Website to sell a potencial product: the Adler Typewriter.
+My primary aim for this project was to introduce a method for sending automated emails directly to users' inboxes.
+
+To accomplish this I used [Resend](https://resend.com/), a tool for interfacing with APIs and effortlessly dispatching emails to designated email addresses. Additionally, I integrated [react.email](https://react.email/) for creating aesthetically pleasing and responsive email templates.
+
+In addition, The Zebra Project also features a user-friendly form with built-in validation to enhance the user experience.
+
+## 👀 Try the demo
+
+- [Zebra Project](https://zebra-exmu24ddn-cstrecht.vercel.app/)
+
+## 🔨 Built with
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Resend](https://resend.com/)
+- [react.email](https://react.email/)
+- [React Hook Form](https://react-hook-form.com/)
+- Deployed with [Vercel](https://vercel.com/dashboard)
+
+## 🚀 Getting Started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  # Clone the repository:
+  $ https://github.com/cstrecht/zebra.git
+  # Enter directory:
+  $ cd zebra
+  # Install dependencies:
+  $ npm install
+  # Start the server:
+  $ npm start
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
