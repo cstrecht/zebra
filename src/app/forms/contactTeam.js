@@ -7,6 +7,7 @@ export default function ContactTeam() {
     register,
     handleSubmit,
     formState: { errors, isSubmitting, isValid },
+    reset,
   } = useForm({
     mode: "onChange",
   });
@@ -17,6 +18,8 @@ export default function ContactTeam() {
         resolve();
         console.log("data", data);
         console.log("errors", Object.keys(errors));
+        window.alert("Thanks for your contact! Click OK to continue.");
+        reset();
       }, 1000);
     });
   }
