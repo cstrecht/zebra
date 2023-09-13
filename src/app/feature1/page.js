@@ -1,9 +1,9 @@
 import FeatureLayout from "../components/FeatureLayout";
 
 const content = {
-  title: "Hands on 👋🏻",
+  title: "Hands down 👋🏻",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean luctus risus erat, et volutpat justo viverra in. Maecenas rhoncus mi id ex laoreet gravida. Cras tristique mi non quam malesuada vehicula ac nec enim. Duis id ligula porttitor, lacinia nisl et, porta tortor. Nulla lobortis porttitor efficitur. Fusce interdum ex sit amet metus dapibus, et eleifend neque sollicitudin. Nam egestas consectetur sem, ullamcorper vestibulum arcu bibendum vel. Quisque elit tortor, pulvinar in libero sit amet, hendrerit elementum neque. Praesent malesuada elementum ex, ac pulvinar lacus tincidunt eget. Sed porttitor volutpat sem. Duis posuere lacus nec tortor maximus, non ultricies nulla fringilla. Duis tincidunt et velit vel congue. Donec semper nunc arcu, non ultricies sem rutrum vel.",
+    "In a world dominated by sleek laptops and touchscreen devices, the Adler Typewriter stands as a testament to timeless craftsmanship and the enduring allure of mechanical precision. Beyond its functional attributes and nostalgic charm, one remarkable quality sets the Adler Typewriter apart - its ability to fit perfectly in the hands of every person who touches it. The Adler Typewriter was meticulously designed with ergonomics in mind. Its sturdy frame and well-placed keys allow for a comfortable typing experience.",
 };
 
 export default function Feature1() {

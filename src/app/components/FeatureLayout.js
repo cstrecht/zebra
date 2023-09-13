@@ -6,10 +6,12 @@ const FeatureLayout = ({ featureTitle, featureDescription }) => {
     <section>
       <GoBackBtn />
       <div className="items-center flex flex-col gap-24">
-        <h1 className="flex justify-center  text-6xl text-black font-semibold">
+        <h1 className="flex justify-center uppercase text-6xl text-black font-semibold">
           {featureTitle}
         </h1>
-        <article className="mx-24">{featureDescription}</article>
+        <article className="m-24 text-3xl leading-10 text-center">
+          {featureDescription}
+        </article>
         <ContactBtn />
       </div>
     </section>

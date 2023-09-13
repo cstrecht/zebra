@@ -10,13 +10,13 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-export const WelcomeEmail = ({ firstName }) => (
+export const WelcomeEmail = ({ name }) => (
   <Html>
     <Head />
     <Preview>Informations are here ✨</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Heading>Hello {firstName}!</Heading>
+        <Heading>Hello {name}!</Heading>
         <Text style={{ ...text, marginBottom: "14px" }}>
           Did I draw your attention? Just to clarify, I'm not here to sell you
           anything, though. 😄

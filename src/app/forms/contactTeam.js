@@ -32,9 +32,9 @@ export default function ContactTeam() {
               <div className="mb-12">
                 <input
                   type="text"
-                  id="firstName"
-                  name="firstName"
-                  {...register("firstName", {
+                  id="name"
+                  name="name"
+                  {...register("name", {
                     required: {
                       value: true,
                       message: "First name is required",
@@ -44,7 +44,7 @@ export default function ContactTeam() {
                   className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium outline-none focus:border-purple-500 focus:shadow-md"
                 />
                 <p className="absolute text-red-700 text-sm">
-                  {errors.firstName?.message}
+                  {errors.name?.message}
                 </p>
               </div>
             </div>

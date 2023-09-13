@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import LoadingSpinner from "../components/LoadingSpinner";
+import { useState } from "react";
 
 //Get the user's input informations:
 function isInputNamedElement(e) {
@@ -7,6 +9,8 @@ function isInputNamedElement(e) {
 }
 
 export default function GetInfo() {
+  const [state, setState] = useState();
+
   async function handleOnSubmit(e) {
     e.preventDefault();
 
@@ -18,14 +22,17 @@ export default function GetInfo() {
         if (!field.name) return;
         formData[field.name] = field.value;
       });
+    setState("loading");
+    console.log(formData);
 
     await fetch("api/email", {
       method: "POST",
       body: JSON.stringify({
-        firstName: formData.firstName,
+        name: formData.name,
         email: formData.email,
       }),
     });
+    setState("sent");
   }
   return (
     <div className="relative z-10">
@@ -36,18 +43,20 @@ export default function GetInfo() {
             <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
               <form onSubmit={handleOnSubmit}>
                 <div className="mb-4">
-                  <label className="block text-gray-700 font-bold text-lg mb-2">
+                  <label className="block font-bold text-xl uppercase text-purple-500">
                     Need to know more? Well...
                   </label>
                   <p className="text-base leading-6 my-8">
-                    Looks like you are interested in knowing more about this
-                    product! Well... let me just warn you that this page is not
-                    official. This is a project build for educational proposes.
-                    However, we do have informations to share! Just give me or
-                    contact and you will receive and keep a look at your inbox!
+                    It appears that you are interested in learning more about
+                    this product! Well, let me just caution you that this page
+                    is not official. It's a project built for educational
+                    purposes. However, we do have information to share! Just
+                    provide me with your contact details, and you will receive
+                    updates in your inbox.
                   </p>
                   <div className="flex flex-col gap-6">
                     <input
+                      required
                       className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="name"
                       name="name"
@@ -55,6 +64,7 @@ export default function GetInfo() {
                       placeholder="What should we call you?"
                     />
                     <input
+                      required
                       className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="email"
                       name="email"
@@ -63,12 +73,31 @@ export default function GetInfo() {
                     />
                   </div>
                 </div>
-                <div className="gap-2 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <div className="gap-2 py-3 sm:flex sm:flex-row-reverse">
                   <button
                     type="submit"
-                    className="mt-3 inline-flex w-full justify-center rounded-md bg-purple-500 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-purple-500 "
+                    className="mt-3 inline-flex w-full justify-center rounded-md bg-purple-500 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-purple-500"
                   >
-                    Send me more info
+                    {state === "loading" ? (
+                      <LoadingSpinner />
+                    ) : state === "sent" ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="2"
+                        stroke="currentColor"
+                        className="w-5 h-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M4.5 12.75l6 6 9-13.5"
+                        />
+                      </svg>
+                    ) : (
+                      <p>Send me more info</p>
+                    )}
                   </button>
                   <Link
                     href="/"

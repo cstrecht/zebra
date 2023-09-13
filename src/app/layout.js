@@ -1,7 +1,10 @@
 import "./globals.css";
-import { Phudu } from "next/font/google";
+import { Hind } from "next/font/google";
 
-const phudu = Phudu({ subsets: ["latin"], weight: "400" });
+const hind = Hind({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export const metadata = {
   title: "Cool Typewriter | Marketing Website",
@@ -10,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={phudu.className}>
+    <html lang="en" className={hind.className}>
       <body className="m-8 flex flex-col">{children}</body>
     </html>
   );
